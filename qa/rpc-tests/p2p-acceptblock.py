@@ -129,7 +129,7 @@ class TestNode(NodeConnCB):
 class AcceptBlockTest(BitcoinTestFramework):
     def add_options(self, parser):
         parser.add_option("--testbinary", dest="testbinary",
-                          default=os.getenv("DOGECOIND", "dogecoind"),
+                          default=os.getenv("TERMUBITD", "dogecoind"),
                           help="dogecoind binary to test")
 
     def __init__(self):

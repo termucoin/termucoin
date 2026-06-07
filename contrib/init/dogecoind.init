@@ -19,14 +19,14 @@ fi
 RETVAL=0
 
 prog=dogecoind
-# you can override the lockfile via DOGECOIND_LOCKFILE in /etc/sysconfig/dogecoind
-lockfile=${DOGECOIND_LOCKFILE-/var/lock/subsys/dogecoind}
+# you can override the lockfile via TERMUBITD_LOCKFILE in /etc/sysconfig/dogecoind
+lockfile=${TERMUBITD_LOCKFILE-/var/lock/subsys/dogecoind}
 
-# dogecoind defaults to /usr/bin/dogecoind, override with DOGECOIND_BIN
-dogecoind=${DOGECOIND_BIN-/usr/bin/dogecoind}
+# dogecoind defaults to /usr/bin/dogecoind, override with TERMUBITD_BIN
+dogecoind=${TERMUBITD_BIN-/usr/bin/dogecoind}
 
-# dogecoind opts default to -disablewallet, override with DOGECOIND_OPTS
-dogecoind_opts=${DOGECOIND_OPTS--disablewallet}
+# dogecoind opts default to -disablewallet, override with TERMUBITD_OPTS
+dogecoind_opts=${TERMUBITD_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "

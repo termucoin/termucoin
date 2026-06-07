@@ -5,12 +5,12 @@
 /**
  * Utility functions for RPC commands
  */
-#ifndef DOGECOIN_WALLET_UTIL_H
-#define DOGECOIN_WALLET_UTIL_H
+#ifndef TERMUBIT_WALLET_UTIL_H
+#define TERMUBIT_WALLET_UTIL_H
 
 #include "fs.h"
 #include "util.h"
 
 fs::path GetBackupDirFromInput(std::string strUserFilename);
 
-#endif // DOGECOIN_WALLET_UTIL_H
+#endif // TERMUBIT_WALLET_UTIL_H

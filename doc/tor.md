@@ -1,4 +1,4 @@
-TOR SUPPORT IN DOGECOIN
+TOR SUPPORT IN TERMUBIT
 =======================
 
 It is possible to run Dogecoin as a Tor hidden service, and connect to such services.

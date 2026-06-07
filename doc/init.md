@@ -104,7 +104,7 @@ use old versions of Upstart and do not supply the start-stop-daemon utility.
 Copy dogecoind.init to /etc/init.d/dogecoind. Test by running `service dogecoind start`.
 
 Using this script, you can adjust the path and flags to the dogecoind program by
-setting the DOGECOIND and FLAGS environment variables in the file
+setting the TERMUBITD and FLAGS environment variables in the file
 /etc/sysconfig/dogecoind. You can also use the DAEMONOPTS environment variable here.
 
 4e) Mac OS X

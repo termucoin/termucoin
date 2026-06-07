@@ -37,7 +37,7 @@ PORT_MIN = 11000
 # The number of ports to "reserve" for p2p and rpc, each
 PORT_RANGE = 5000
 
-DOGECOIND_PROC_WAIT_TIMEOUT = 60
+TERMUBITD_PROC_WAIT_TIMEOUT = 60
 
 
 class PortSeed:
@@ -251,7 +251,7 @@ def initialize_chain(test_dir, num_nodes, cachedir):
         # Create cache directories, run dogecoinds:
         for i in range(MAX_NODES):
             datadir=initialize_datadir(cachedir, i)
-            args = [ os.getenv("DOGECOIND", "dogecoind"), "-server", "-keypool=1", "-datadir="+datadir, "-discover=0" ]
+            args = [ os.getenv("TERMUBITD", "dogecoind"), "-server", "-keypool=1", "-datadir="+datadir, "-discover=0" ]
             if i > 0:
                 args.append("-connect=127.0.0.1:"+str(p2p_port(0)))
             dogecoind_processes[i] = subprocess.Popen(args)
@@ -337,7 +337,7 @@ def start_node(i, dirname, extra_args=None, rpchost=None, timewait=None, binary=
     """
     datadir = os.path.join(dirname, "node"+str(i))
     if binary is None:
-        binary = os.getenv("DOGECOIND", "dogecoind")
+        binary = os.getenv("TERMUBITD", "dogecoind")
     args = [ binary, "-datadir="+datadir, "-server", "-keypool=1", "-discover=0", "-rest", "-mocktime="+str(get_mocktime()) ]
     if extra_args is not None: args.extend(extra_args)
     dogecoind_processes[i] = subprocess.Popen(args)
@@ -377,7 +377,7 @@ def stop_node(node, i):
         node.stop()
     except http.client.CannotSendRequest as e:
         print("WARN: Unable to stop node: " + repr(e))
-    return_code = dogecoind_processes[i].wait(timeout=DOGECOIND_PROC_WAIT_TIMEOUT)
+    return_code = dogecoind_processes[i].wait(timeout=TERMUBITD_PROC_WAIT_TIMEOUT)
     assert_equal(return_code, 0)
     del dogecoind_processes[i]
 
