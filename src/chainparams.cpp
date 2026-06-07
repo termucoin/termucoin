@@ -74,8 +74,6 @@ private:
 public:
     CMainParams() {
         strNetworkID = "main";
-
-        // Blocks 0 - 144999 are conventional difficulty calculation
         consensus.nSubsidyHalvingInterval = 1280000;
         consensus.nMajorityEnforceBlockUpgrade = 1500;
         consensus.nMajorityRejectBlockOutdated = 1900;
