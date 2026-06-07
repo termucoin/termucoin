@@ -127,7 +127,7 @@ bool CheckAuxPowProofOfWork(const CBlockHeader& block, const Consensus::Params& 
 
 CAmount GetTermubitBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, uint256 prevHash)
 {
-    // Reward: 50 TRB per block
+    // Reward: 50 TERM per block
     CAmount nSubsidy = 50 * COIN;
 
     // halving every 2.100.000 per block
