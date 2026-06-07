@@ -1,4 +1,4 @@
-name: dogecoin-core
+name: termubit-core
 # Running 'snapcraft register <name>' is advised
 version: '1.14.6'
 summary: Reference client of Termubit, a peer-to-peer digital currency like Bitcoin.
@@ -19,29 +19,29 @@ architectures:
 
 apps:
   d:
-    command: dogecoind
+    command: termubitd
     plugs: [home, removable-media, network, network-bind]
     environment:
-      # Override HOME so the datadir is located at ~/snap/dogecoin-core/common/.dogecoin/ instead of ~/snap/dogecoin-core/current/.dogecoin/, and each new version of the snap won't have a different data directory: https://docs.snapcraft.io/environment-variables/7983
+      # Override HOME so the datadir is located at ~/snap/termubit-core/common/.termubit/ instead of ~/snap/termubit-core/current/.termubit/, and each new version of the snap won't have a different data directory: https://docs.snapcraft.io/environment-variables/7983
       HOME: $SNAP_USER_COMMON
   qt:
-    command: desktop-launch dogecoin-qt
+    command: desktop-launch termubit-qt
     plugs: [home, removable-media, network, network-bind, desktop, x11, unity7]
     environment:
       HOME: $SNAP_USER_COMMON
       DISABLE_WAYLAND: 1
   cli:
-    command: dogecoin-cli
+    command: termubit-cli
     plugs: [home, removable-media, network]
     environment:
       HOME: $SNAP_USER_COMMON
   tx:
-    command: dogecoin-tx
+    command: termubit-tx
     plugs: [home, removable-media, network]
     environment:
       HOME: $SNAP_USER_COMMON
   test:
-    command: test_dogecoin
+    command: test_termubit
     plugs: [home, removable-media, network]
     environment:
       HOME: $SNAP_USER_COMMON
@@ -76,48 +76,48 @@ parts:
       - xdg-user-dirs
       - fcitx-frontend-qt5
 
-  dogecoin-core:
+  termubit-core:
     plugin: nil
     override-build: |
-      echo "This script is viewable at https://github.com/dogecoin/dogecoin/blob/master/contrib/snap/snapcraft.yaml"
+      echo "This script is viewable at https://github.com/termubit/termubit/blob/master/contrib/snap/snapcraft.yaml"
       echo "Downloading files..."
-      if [ "$SNAPCRAFT_ARCH_TRIPLET" = "i386-linux-gnu" ]; then # snap designates 32-bit as i386, but dogecoin designates it as i686
+      if [ "$SNAPCRAFT_ARCH_TRIPLET" = "i386-linux-gnu" ]; then # snap designates 32-bit as i386, but termubit designates it as i686
         BUILD_ARCH_TRIPLET=i686-pc-linux-gnu
       else
         BUILD_ARCH_TRIPLET=$SNAPCRAFT_ARCH_TRIPLET
       fi
-      wget https://github.com/dogecoin/dogecoin/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/dogecoin-${SNAPCRAFT_PROJECT_VERSION}-${BUILD_ARCH_TRIPLET}.tar.gz
-      wget https://github.com/dogecoin/gitian.sigs/archive/refs/heads/master.tar.gz
+      wget https://github.com/termubit/termubit/releases/download/v${SNAPCRAFT_PROJECT_VERSION}/termubit-${SNAPCRAFT_PROJECT_VERSION}-${BUILD_ARCH_TRIPLET}.tar.gz
+      wget https://github.com/termubit/gitian.sigs/archive/refs/heads/master.tar.gz
       tar -xvf master.tar.gz
       echo "Verifying secure hash matches signed values..."
-      checksum=$(sha256sum dogecoin-${SNAPCRAFT_PROJECT_VERSION}-${BUILD_ARCH_TRIPLET}.tar.gz)
-      if ! (grep -r $checksum * | grep dogecoin-${SNAPCRAFT_PROJECT_VERSION}-${BUILD_ARCH_TRIPLET}.tar.gz); then
+      checksum=$(sha256sum termubit-${SNAPCRAFT_PROJECT_VERSION}-${BUILD_ARCH_TRIPLET}.tar.gz)
+      if ! (grep -r $checksum * | grep termubit-${SNAPCRAFT_PROJECT_VERSION}-${BUILD_ARCH_TRIPLET}.tar.gz); then
         echo "Secure hash not verified."
         return
       else
         echo "Secure hash verified."
       fi
-      tar -xvf dogecoin-${SNAPCRAFT_PROJECT_VERSION}-${BUILD_ARCH_TRIPLET}.tar.gz
+      tar -xvf termubit-${SNAPCRAFT_PROJECT_VERSION}-${BUILD_ARCH_TRIPLET}.tar.gz
       echo "Running tests..."
-      if ! (dogecoin-${SNAPCRAFT_PROJECT_VERSION}/bin/test_dogecoin); then
+      if ! (termubit-${SNAPCRAFT_PROJECT_VERSION}/bin/test_termubit); then
         echo "Termubit tests failed."
         return
       else
         echo "Termubit tests passed."
       fi
-      wget https://raw.githubusercontent.com/dogecoin/dogecoin/v${SNAPCRAFT_PROJECT_VERSION}/doc/release-notes.md
+      wget https://raw.githubusercontent.com/termubit/termubit/v${SNAPCRAFT_PROJECT_VERSION}/doc/release-notes.md
       cat release-notes.md
       echo "Installing Termubit Core..."
       echo "Version ${SNAPCRAFT_PROJECT_VERSION}"
-      install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin dogecoin-${SNAPCRAFT_PROJECT_VERSION}/bin/dogecoind
-      if ! ([ "$BUILD_ARCH_TRIPLET" = "aarch64-linux-gnu" ]); then # there is no official dogecoin-qt build on arm64
-        install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin dogecoin-${SNAPCRAFT_PROJECT_VERSION}/bin/dogecoin-qt
+      install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin termubit-${SNAPCRAFT_PROJECT_VERSION}/bin/termubitd
+      if ! ([ "$BUILD_ARCH_TRIPLET" = "aarch64-linux-gnu" ]); then # there is no official termubit-qt build on arm64
+        install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin termubit-${SNAPCRAFT_PROJECT_VERSION}/bin/termubit-qt
       fi
-      install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin dogecoin-${SNAPCRAFT_PROJECT_VERSION}/bin/dogecoin-cli
-      install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin dogecoin-${SNAPCRAFT_PROJECT_VERSION}/bin/dogecoin-tx
-      install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin dogecoin-${SNAPCRAFT_PROJECT_VERSION}/bin/test_dogecoin
-      wget https://raw.githubusercontent.com/dogecoin/dogecoin/master/share/pixmaps/dogecoin128.png
-      install -m 0644 -D -t $SNAPCRAFT_PART_INSTALL/share/pixmaps dogecoin128.png
+      install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin termubit-${SNAPCRAFT_PROJECT_VERSION}/bin/termubit-cli
+      install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin termubit-${SNAPCRAFT_PROJECT_VERSION}/bin/termubit-tx
+      install -m 0755 -D -t $SNAPCRAFT_PART_INSTALL/bin termubit-${SNAPCRAFT_PROJECT_VERSION}/bin/test_termubit
+      wget https://raw.githubusercontent.com/termubit/termubit/master/share/pixmaps/termubit128.png
+      install -m 0644 -D -t $SNAPCRAFT_PART_INSTALL/share/pixmaps termubit128.png
     build-packages:
       - wget
     after:

@@ -1,31 +1,31 @@
-# /etc/conf.d/dogecoind: config file for /etc/init.d/dogecoind
+# /etc/conf.d/termubitd: config file for /etc/init.d/termubitd
 
 # Config file location
-#TERMUBITD_CONFIGFILE="/etc/dogecoin/dogecoin.conf"
+#TERMUBITD_CONFIGFILE="/etc/termubit/termubit.conf"
 
 # What directory to write pidfile to?  (created and owned by $TERMUBITD_USER)
-#TERMUBITD_PIDDIR="/var/run/dogecoind"
+#TERMUBITD_PIDDIR="/var/run/termubitd"
 
 # What filename to give the pidfile
-#TERMUBITD_PIDFILE="${TERMUBITD_PIDDIR}/dogecoind.pid"
+#TERMUBITD_PIDFILE="${TERMUBITD_PIDDIR}/termubitd.pid"
 
-# Where to write dogecoind data (be mindful that the blockchain is large)
-#TERMUBITD_DATADIR="/var/lib/dogecoind"
+# Where to write termubitd data (be mindful that the blockchain is large)
+#TERMUBITD_DATADIR="/var/lib/termubitd"
 
-# User and group to own dogecoind process
-#TERMUBITD_USER="dogecoin"
-#TERMUBITD_GROUP="dogecoin"
+# User and group to own termubitd process
+#TERMUBITD_USER="termubit"
+#TERMUBITD_GROUP="termubit"
 
-# Path to dogecoind executable
-#TERMUBITD_BIN="/usr/bin/dogecoind"
+# Path to termubitd executable
+#TERMUBITD_BIN="/usr/bin/termubitd"
 
-# Nice value to run dogecoind under
+# Nice value to run termubitd under
 #TERMUBITD_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
 TERMUBITD_OPTS="-disablewallet"
 
-# The timeout in seconds OpenRC will wait for dogecoind to terminate
+# The timeout in seconds OpenRC will wait for termubitd to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule

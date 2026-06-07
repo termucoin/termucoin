@@ -1,6 +1,6 @@
 [Protocol]
-exec=dogecoin-qt '%u'
-protocol=dogecoin
+exec=termubit-qt '%u'
+protocol=termubit
 input=none
 output=none
 helper=true

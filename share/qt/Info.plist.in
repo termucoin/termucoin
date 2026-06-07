@@ -11,7 +11,7 @@
   </array>
 
   <key>CFBundleIconFile</key>
-  <string>dogecoin.icns</string>
+  <string>termubit.icns</string>
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
@@ -38,7 +38,7 @@
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>com.dogecoin.Termubit-Qt</string>
+  <string>com.termubit.Termubit-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>com.dogecoin.TermubitPayment</string>
+      <string>com.termubit.TermubitPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>dogecoin</string>
+        <string>termubit</string>
       </array>
     </dict>
   </array>
@@ -58,7 +58,7 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>com.dogecoin.paymentrequest</string>
+      <string>com.termubit.paymentrequest</string>
       <key>UTTypeDescription</key>
       <string>Termubit payment request</string>
       <key>UTTypeConformsTo</key>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/dogecoin-paymentrequest</string>
+        <string>application/termubit-paymentrequest</string>
         <key>public.filename-extension</key>
         <array>
-          <string>dogecoinpaymentrequest</string>
+          <string>termubitpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>com.dogecoin.paymentrequest</string>
+        <string>com.termubit.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>
