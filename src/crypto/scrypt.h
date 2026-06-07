@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2012 The Litecoin Core developers
-// Copyright (c) 2013-2021 The Termubit Core developers
+// Copyright (c) 2026 The Termubit Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 

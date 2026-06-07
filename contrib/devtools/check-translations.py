@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2014 Wladimir J. van der Laan
-# Copyright (c) 2022 The Termubit Core developers
+# Copyright (c) 2026 The Termubit Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 '''
