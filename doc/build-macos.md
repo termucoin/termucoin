@@ -2,10 +2,10 @@
 
 Tested on MacOs Ventura and Sonoma on Intel (x86_64) and Apple Silicon (arm64) macs.
 
-### Clone dogecoin locally, or check it out, etc. ###
+### Clone termubit locally, or check it out, etc. ###
 
 ```sh
-git clone https://github.com/dogecoin/dogecoin.git
+git clone https://github.com/termubit/termubit.git
 ```
 
 ### Set up OSX basic build dependencies. ##
@@ -42,7 +42,7 @@ brew install autoconf automake libtool miniupnpc openssl pkg-config protobuf \
 ### Go back to your Termubit repo ###
 
 ```sh
-cd ~/dogecoin
+cd ~/termubit
 
 ./autogen.sh
 ./configure --enable-c++17 --with-gui --with-boost=`brew --prefix boost`
@@ -60,5 +60,5 @@ Go have another beverage.
 Run it.
 
 ```sh
-/usr/local/bin/dogecoin-qt
+/usr/local/bin/termubit-qt
 ```

@@ -4,7 +4,7 @@
 
 The easiest way to install the latest version of the Termubit Core software is
 by to download the latest precompiled binaries for your platform from the
-[release page](https://github.com/dogecoin/dogecoin/releases). Currently,
+[release page](https://github.com/termubit/termubit/releases). Currently,
 binaries are released for the following platforms:
 
 - Windows, 64-bit and 32-bit
@@ -54,7 +54,7 @@ grep x86_64-linux SHA256SUMS.asc | sha256sum -c
 ```
 
 Full attestations to release binary integrity can be found at the
-[`gitian.sigs` repository on GitHub](https://github.com/dogecoin/gitian.sigs)
+[`gitian.sigs` repository on GitHub](https://github.com/termubit/gitian.sigs)
 and everyone can run the full release build process themselves to verify the
 output; resulting binaries are fully deterministic. Please refer to
 [the gitian building documentation](doc/gitian-building.md) for more
@@ -110,7 +110,7 @@ to see it.
 
 **testnet and regtest modes**
 
-Run with the `-testnet` option to run with "play dogecoins" on the test network, if you
+Run with the `-testnet` option to run with "play termubits" on the test network, if you
 are testing multi-machine code that needs to operate across the internet.
 
 If you are testing something that can run on one machine, run with the `-regtest` option.

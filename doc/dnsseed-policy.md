@@ -44,11 +44,11 @@ related to the DNS seed operation.
 If these expectations cannot be satisfied the operator should
 discontinue providing services and contact the active Termubit
 Core development team as well as posting on
-[Termubit Dev](https://reddit.com/r/dogecoindev).
+[Termubit Dev](https://reddit.com/r/termubitdev).
 
 Behavior outside of these expectations may be reasonable in some
 situations but should be discussed in public in advance.
 
 See also
 ----------
-- [dogecoin-seeder](https://github.com/langerhans/dogecoin-seeder) is a reference implementation of a DNS seed.
+- [termubit-seeder](https://github.com/langerhans/termubit-seeder) is a reference implementation of a DNS seed.

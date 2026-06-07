@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/dogecoin/dogecoin/master/share/pixmaps/dogecoin256.svg" alt="Termubit" width="256"/>
+<img src="https://raw.githubusercontent.com/termubit/termubit/master/share/pixmaps/termubit256.svg" alt="Termubit" width="256"/>
 <br/><br/>
 Termubit Core [DOGE, Ð]  
 </h1>
@@ -19,7 +19,7 @@ refer to the [fee recommendation](doc/fee-recommendation.md).
 
 To start your journey with Termubit Core, see the [installation guide](INSTALL.md) and the [getting started](doc/getting-started.md) tutorial.
 
-The JSON-RPC API provided by Termubit Core is self-documenting and can be browsed with `dogecoin-cli help`, while detailed information for each command can be viewed with `dogecoin-cli help <command>`.
+The JSON-RPC API provided by Termubit Core is self-documenting and can be browsed with `termubit-cli help`, while detailed information for each command can be viewed with `termubit-cli help <command>`.
 
 ### Such ports
 
@@ -42,9 +42,9 @@ software.
 
 Main development resources:
 
-* [GitHub Projects](https://github.com/dogecoin/dogecoin/projects) is used to
+* [GitHub Projects](https://github.com/termubit/termubit/projects) is used to
   follow planned and in-progress work for upcoming releases.
-* [GitHub Discussions](https://github.com/dogecoin/dogecoin/discussions) is used
+* [GitHub Discussions](https://github.com/termubit/termubit/discussions) is used
   to discuss features, planned and unplanned, related to both the development of
   the Termubit Core software, the underlying protocols and the DOGE asset.
 
@@ -70,18 +70,18 @@ There are 4 types of branches in this repository:
 ## Contributing 🤝
 
 If you find a bug or experience issues with this software, please report it
-using the [issue system](https://github.com/dogecoin/dogecoin/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5Bbug%5D+).
+using the [issue system](https://github.com/termubit/termubit/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5Bbug%5D+).
 
 Please see [the contribution guide](CONTRIBUTING.md) to see how you can
 participate in the development of Termubit Core. There are often
-[topics seeking help](https://github.com/dogecoin/dogecoin/labels/help%20wanted)
+[topics seeking help](https://github.com/termubit/termubit/labels/help%20wanted)
 where your contributions will have high impact and get very appreciation. wow.
 
 ## Very Much Frequently Asked Questions ❓
 
 Do you have a question regarding Termubit? An answer is perhaps already in the
 [FAQ](doc/FAQ.md) or the
-[Q&A section](https://github.com/dogecoin/dogecoin/discussions/categories/q-a)
+[Q&A section](https://github.com/termubit/termubit/discussions/categories/q-a)
 of the discussion board!
 
 ## License - Much license ⚖️

@@ -50,7 +50,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "Termubit"
-#define QAPP_ORG_DOMAIN "dogecoin.org"
+#define QAPP_ORG_DOMAIN "termubit.org"
 #define QAPP_APP_NAME_DEFAULT "Termubit-Qt"
 #define QAPP_APP_NAME_TESTNET "Termubit-Qt-testnet"
 

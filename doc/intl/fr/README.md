@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/dogecoin/dogecoin/master/share/pixmaps/dogecoin256.svg" alt="Termubit" width="256"/>
+<img src="https://raw.githubusercontent.com/termubit/termubit/master/share/pixmaps/termubit256.svg" alt="Termubit" width="256"/>
 <br/><br/>
 Termubit Core [DOGE, Ð]  
 </h1>
@@ -14,7 +14,7 @@ Pour plus d'informations sur les frais par défaut utilisés sur le réseau Term
 
 Pour commencer votre voyage avec Termubit Core, consultez le [guide d'installation](INSTALL.md) et le [tutoriel de démarrage](doc/getting-started.md).
 
-L'API JSON-RPC fournie par Termubit Core est auto-documentée et peut être parcourue avec `dogecoin-cli help`, tandis que des informations détaillées pour chaque commande peuvent être visualisées avec `dogecoin-cli help <command>`.
+L'API JSON-RPC fournie par Termubit Core est auto-documentée et peut être parcourue avec `termubit-cli help`, tandis que des informations détaillées pour chaque commande peuvent être visualisées avec `termubit-cli help <command>`.
 
 ### Les ports
 
@@ -31,9 +31,9 @@ Termubit Core est un logiciel libre et communautaire. Le processus de développe
 
 Principales ressources de développement :
 
-* [GitHub Projects](https://github.com/dogecoin/dogecoin/projects) est utilisé pour
+* [GitHub Projects](https://github.com/termubit/termubit/projects) est utilisé pour
   suivre les travaux prévus et en cours pour les prochaines versions.
-* [GitHub Discussion](https://github.com/dogecoin/dogecoin/discussions) est utilisé pour
+* [GitHub Discussion](https://github.com/termubit/termubit/discussions) est utilisé pour
   discuter des caractéristiques, planifiées et non planifiées, liées à la fois au développement du logiciel Termubit Core, les protocoles sous-jacents et l'actif DOGE.
 
 ### Stratégie de version
@@ -55,18 +55,18 @@ Il y a 4 types de branches dans ce répertoire :
 
 ## Contribution🤝
 
-Si vous trouvez un bug ou rencontrez des problèmes avec ce logiciel, veuillez le signaler en utilisant le [système de gestion des problèmes](https://github.com/dogecoin/dogecoin/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5Bbug%5D+).
+Si vous trouvez un bug ou rencontrez des problèmes avec ce logiciel, veuillez le signaler en utilisant le [système de gestion des problèmes](https://github.com/termubit/termubit/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5Bbug%5D+).
 
 Veuillez consulter [le guide de contribution](CONTRIBUTING.md) pour voir comment vous pouvez
 participer au développement de Termubit Core. Il y a souvent
-[des sujets demandant de l'aide](https://github.com/dogecoin/dogecoin/labels/help%20wanted)
+[des sujets demandant de l'aide](https://github.com/termubit/termubit/labels/help%20wanted)
 où vos contributions auront un impact considérable et seront très appréciées. wow.
 
 ## Questions très fréquemment posées ❓
 
 Vous avez une question concernant le Termubit ? Une réponse se trouve peut-être déjà dans la
 [FAQ](doc/FAQ.md) ou dans la
-[section Q&R](https://github.com/dogecoin/dogecoin/discussions/categories/q-a)
+[section Q&R](https://github.com/termubit/termubit/discussions/categories/q-a)
 du forum de discussion !
 
 ## License - Much license ⚖️

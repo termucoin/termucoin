@@ -13,8 +13,8 @@
 #include "consensus/consensus.h"
 #include "consensus/merkle.h"
 #include "consensus/validation.h"
-#include "dogecoin.h"
-#include "dogecoin-fees.h"
+#include "termubit.h"
+#include "termubit-fees.h"
 #include "fs.h"
 #include "hash.h"
 #include "init.h"
@@ -1722,7 +1722,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("dogecoin-scriptch");
+    RenameThread("termubit-scriptch");
     scriptcheckqueue.Thread();
 }
 

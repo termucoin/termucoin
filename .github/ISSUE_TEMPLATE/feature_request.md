@@ -8,7 +8,7 @@ title: '[feat] '
 
 <!-- For general questions about Termubit or wallet recovery please use one of the various communities:
 * [Dogeducation on reddit](https://www.reddit.com/r/dogeducation/)
-* [Discord](https://discord.com/invite/dogecoin) -->
+* [Discord](https://discord.com/invite/termubit) -->
 
 <!-- ISSUES MISSING IMPORTANT INFORMATION MAY BE CLOSED WITHOUT INVESTIGATION. -->
 

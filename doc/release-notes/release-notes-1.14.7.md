@@ -1,6 +1,6 @@
 Termubit Core version 1.14.7 is now available from:
 
-  <https://github.com/dogecoin/dogecoin/releases/tag/v1.14.7/>
+  <https://github.com/termubit/termubit/releases/tag/v1.14.7/>
 
 This is a new minor version release, including enchancements to several RPC
 methods and important security updates for Termubit-Qt. Termubit-Qt users on
@@ -8,11 +8,11 @@ any platform are strongly recommended to upgrade.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/dogecoin/dogecoin/issues>
+  <https://github.com/termubit/termubit/issues>
 
 To receive notifications about updates, subscribe to the release mailing list:
 
-  <https://sourceforge.net/projects/dogecoin/lists/dogecoin-releases>
+  <https://sourceforge.net/projects/termubit/lists/termubit-releases>
 
 
 Compatibility
@@ -43,7 +43,7 @@ user.
 BIP-21 payment requests remain fully supported.
 
 The functionality can be re-enabled by using `enable-bip70=1` either in your
-dogecoin.conf or as an argument to Termubit-Qt if absolutely needed. Please use
+termubit.conf or as an argument to Termubit-Qt if absolutely needed. Please use
 extreme caution when exercising this option.
 
 This is step 1 in full deprecation of BIP-70, BIP-71 and BIP-72 inside Termubit
@@ -63,7 +63,7 @@ Core. Future releases may completely remove this feature.
   self-compile to update their system libraries. (#3384)
 * Updated the `rpcuser.py` script to improve the password and salt generation
   methods it uses (#3388). If you've used this script in the past, replacing
-  current authentication in `dogecoin.conf` with new credentials generated with
+  current authentication in `termubit.conf` with new credentials generated with
   the new version of this script is recommended.
 
 
@@ -113,7 +113,7 @@ Mapping between boolean and integer parameter functionality:
 For more information see:
 
 ```
-dogecoin-cli help getblock
+termubit-cli help getblock
 ```
 
 *Implemented with #3299, #3306 and #3307*
@@ -132,7 +132,7 @@ The user can select which stats are returned to save processing time for stats
 that aren't wanted. For more information, use:
 
 ```
-dogecoin-cli help getblockstats
+termubit-cli help getblockstats
 ```
 
 *Implemented with #3297*
@@ -198,7 +198,7 @@ Bug Fixes
 
 * Fixed a bug where `-maxtxfee` was not being respected outside of the wallet,
   which caused problems with the `sendrawtransaction` RPC call. (#3088)
-* Fixed the example `dogecoind.service` file (#3066)
+* Fixed the example `termubitd.service` file (#3066)
 * Fixed a bug where misnamed signal handlers were causing excessive warnings
   in Termubit Qt logs (#3063)
 * Fixed a bug where extremely long wallet labels could cause Qt popups to flow
@@ -231,7 +231,7 @@ Minor Changes
 * Added a translation in Vietnamese (#3060), and fixed missing information in
   the Chinese README translations (#3070)
 * Updated the python `ltc-scrypt` module to a maintained fork (#3080), which
-  can be found at https://github.com/dogecoin/ltc-scrypt
+  can be found at https://github.com/termubit/ltc-scrypt
 * Backported a pure Python implementation of RIPEMD160 from Bitcoin Core (#3081)
 * Removed historical OpenSSL comparison tests to increase compatibility with
   OpenSSL 3+ (#3079)

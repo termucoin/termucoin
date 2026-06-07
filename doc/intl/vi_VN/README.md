@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/dogecoin/dogecoin/master/share/pixmaps/dogecoin256.svg" alt="Termubit" width="256"/>
+<img src="https://raw.githubusercontent.com/termubit/termubit/master/share/pixmaps/termubit256.svg" alt="Termubit" width="256"/>
 <br/><br/>
 Termubit Core [DOGE, Ð]  
 </h1>
@@ -13,7 +13,7 @@ tham khảo [khuyến nghị phí](doc/fee-recommendation.md).
 
 Để bắt đầu cuộc hành trình của bạn với Termubit Core, xem [hướng dẫn cài đặt](INSTALL.md) và hướng dẫn [bắt đầu](doc/getting-started.md).
 
-API JSON-RPC được cung cấp bởi Termubit Core là self-documenting và có thể đọc lướt qua với `dogecoin-cli help`, trong khi thông tin chi tiết cho từng lệnh có thể được xem với `dogecoin-cli help <command>`.
+API JSON-RPC được cung cấp bởi Termubit Core là self-documenting và có thể đọc lướt qua với `termubit-cli help`, trong khi thông tin chi tiết cho từng lệnh có thể được xem với `termubit-cli help <command>`.
 
 ### Such ports
 
@@ -35,9 +35,9 @@ trên phần mềm.
 
 Các nguồn lực phát triển chính::
 
-* [GitHub Projects](https://github.com/dogecoin/dogecoin/projects) được sử dụng để
+* [GitHub Projects](https://github.com/termubit/termubit/projects) được sử dụng để
   theo dõi công việc đã lên kế hoạch và đang tiến hành cho các bản phát hành sắp tới.
-* [GitHub Discussion](https://github.com/dogecoin/dogecoin/discussions) được sử dụng để
+* [GitHub Discussion](https://github.com/termubit/termubit/discussions) được sử dụng để
   để thảo luận về các tính năng, được lên kế hoạch và chưa được kế hoạch, liên quan đến
   sự phát triển của phần mềm Termubit Core, các giao thức nền tảng và DOGE asset.
 
@@ -59,18 +59,18 @@ Có 3 loại nhánh trong kho này:
 ## Đóng góp 🤝
 
 Nếu bạn tìm thấy lỗi hoặc gặp sự cố với phần mềm này, vui lòng báo cáo nó
-bằng cách sử dụng [hệ thống sự cố](https://github.com/dogecoin/dogecoin/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5Bbug%5D+).
+bằng cách sử dụng [hệ thống sự cố](https://github.com/termubit/termubit/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5Bbug%5D+).
 
 Vui lòng xem [hướng dẫn đóng góp](CONTRIBUTING.md) để biết cách
 bạn có thể tham gia vào quá trình phát triển Termubit Core. Thường có những
-[chủ đề tìm kiếm sự trợ giúp](https://github.com/dogecoin/dogecoin/labels/help%20wanted)
+[chủ đề tìm kiếm sự trợ giúp](https://github.com/termubit/termubit/labels/help%20wanted)
 trong đó những đóng góp của bạn sẽ có tác động cao và nhận được sự đánh giá rất cao. wow.
 
 ## Những Câu Hỏi Thường Gặp ❓
 
 Bạn có câu hỏi liên quan đến Termubit? Câu trả lời có lẽ đã có trong phần
 [FAQ](doc/FAQ.md) hoặc
-[Q&A section](https://github.com/dogecoin/dogecoin/discussions/categories/q-a)
+[Q&A section](https://github.com/termubit/termubit/discussions/categories/q-a)
 của hội đồng thảo luận!
 
 ## Giấy phép ⚖️

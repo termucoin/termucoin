@@ -4,9 +4,9 @@ Termubit Core is open source software, and we would welcome contributions
 which improve the state of the software. For those wanting to discuss changes,
 or look for work that needs doing, please see:
 
-* [Help requests](https://github.com/dogecoin/dogecoin/labels/help%20wanted)
-* [Projects](https://github.com/dogecoin/dogecoin/projects)
-* [Termubitdev on reddit](https://www.reddit.com/r/dogecoindev/)
+* [Help requests](https://github.com/termubit/termubit/labels/help%20wanted)
+* [Projects](https://github.com/termubit/termubit/projects)
+* [Termubitdev on reddit](https://www.reddit.com/r/termubitdev/)
 
 ## Branch Strategy
 

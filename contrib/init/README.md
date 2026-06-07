@@ -1,11 +1,11 @@
 Sample configuration files for:
 
-SystemD: dogecoind.service
-Upstart: dogecoind.conf
-OpenRC:  dogecoind.openrc
-         dogecoind.openrcconf
-CentOS:  dogecoind.init
-OS X:    org.dogecoin.dogecoind.plist
+SystemD: termubitd.service
+Upstart: termubitd.conf
+OpenRC:  termubitd.openrc
+         termubitd.openrcconf
+CentOS:  termubitd.init
+OS X:    org.termubit.termubitd.plist
 
 have been made available to assist packagers in creating node packages here.
 

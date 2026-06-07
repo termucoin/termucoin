@@ -5,8 +5,8 @@ of the latest changes on NixOS.
 
 Clone and enter the repo:
 
-    $ git clone https://github.com/dogecoin/dogecoin
-    $ cd dogecoin
+    $ git clone https://github.com/termubit/termubit
+    $ cd termubit
 
 Enter the `nix-shell` environment with all the Termubit dependencies present:
 
@@ -20,4 +20,4 @@ Run the build steps with flags necessary for NixOS:
 
 Start the GUI!
 
-    $ ./src/qt/dogecoin-qt
+    $ ./src/qt/termubit-qt

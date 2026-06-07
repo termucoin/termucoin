@@ -17,21 +17,21 @@ snap install \*.snap --devmode
 ### To Upload to the Snap Store
 ```
 snapcraft login
-snapcraft register dogecoin-core
+snapcraft register termubit-core
 snapcraft upload \*.snap
-sudo snap install dogecoin-core
+sudo snap install termubit-core
 ```
 
 ### Usage
 ```
-dogecoin-unofficial.cli # for dogecoin-cli
-dogecoin-unofficial.d # for dogecoind
-dogecoin-unofficial.qt # for dogecoin-qt
-dogecoin-unofficial.test # for test_dogecoin
-dogecoin-unofficial.tx # for dogecoin-tx
+termubit-unofficial.cli # for termubit-cli
+termubit-unofficial.d # for termubitd
+termubit-unofficial.qt # for termubit-qt
+termubit-unofficial.test # for test_termubit
+termubit-unofficial.tx # for termubit-tx
 ```
 
 ### Uninstalling
 ```
-sudo snap remove dogecoin-unofficial
+sudo snap remove termubit-unofficial
 ```

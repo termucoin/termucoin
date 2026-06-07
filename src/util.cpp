@@ -106,8 +106,8 @@ using namespace std;
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "dogecoin.conf";
-const char * const BITCOIN_PID_FILENAME = "dogecoind.pid";
+const char * const BITCOIN_CONF_FILENAME = "termubit.conf";
+const char * const BITCOIN_PID_FILENAME = "termubitd.pid";
 
 CCriticalSection cs_args;
 map<string, string> mapArgs;
@@ -465,7 +465,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "dogecoin";
+    const char* pszModule = "termubit";
 #endif
     if (pex)
         return strprintf(
@@ -503,7 +503,7 @@ fs::path GetDefaultDataDir()
     return pathRet / "Library/Application Support/Termubit";
 #else
     // Unix
-    return pathRet / ".dogecoin";
+    return pathRet / ".termubit";
 #endif
 #endif
 }

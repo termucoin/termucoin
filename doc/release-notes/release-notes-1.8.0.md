@@ -25,7 +25,7 @@ menu. Ensure your existing wallet software is closed before upgrading.
 Note that a full reindex is required as part of the upgrade to 1.8, and this
 will typically take around an hour to complete. If you are running the Qt client
 you will be prompted to reindex when first running the software, while if you
-use "dogecoind" you must run it the first time with the "-reindex" command line
+use "termubitd" you must run it the first time with the "-reindex" command line
 option.
 
 To ensure a smooth switchover to AuxPoW, 1.8 has safe mode disabled 1 hour before
@@ -62,7 +62,7 @@ Termubit Core 1.8 adds payment protocol support, which is used to streamline pay
 being made to merchants.
 
 This protocol is defined in DIP0070-DIP0072, based on the BIP standards with the same
-assigned numbers. DIP standards can be found at https://github.com/dogecoin/dips/ .
+assigned numbers. DIP standards can be found at https://github.com/termubit/dips/ .
 The key differencs between the Bitcoin and Termubit payment protocols are that
 the Termubit payment request uses a "genesis" field containing the hash of the network's
 genesis block to identify networks instead of the "network" field. Further, MIME types
@@ -95,5 +95,5 @@ disposed of in all cases.
 Tweaked trigger conditions for safe mode to take into account the much faster block time
 of Termubit compared to Bitcoin. This should lead to less false positives.
 
-A problem in parsing mangled dogecoin: URIs under Windows has been resolved, and as
-part of this work network detection for dogecoin: URIs is now more robust.
+A problem in parsing mangled termubit: URIs under Windows has been resolved, and as
+part of this work network detection for termubit: URIs is now more robust.

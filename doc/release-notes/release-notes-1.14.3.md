@@ -1,19 +1,19 @@
 Termubit Core version 1.14.3 is now available from:
 
-  <https://github.com/dogecoin/dogecoin/releases/tag/v1.14.3/>
+  <https://github.com/termubit/termubit/releases/tag/v1.14.3/>
 
 This is a new minor version release, including various bugfixes and performance improvements. It is a recommended
 update for all users.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/dogecoin/dogecoin/issues>
+  <https://github.com/termubit/termubit/issues>
 
 To receive security and update notifications, please watch reddit or Twitter:
 
-  * https://www.reddit.com/r/dogecoin/
+  * https://www.reddit.com/r/termubit/
   * @Termubit on Twitter for high priority announcements
-  * @dogecoin\_devs on Twitter for updates on development work
+  * @termubit\_devs on Twitter for updates on development work
 
 The developers also maintain personal Twitter accounts:
 
@@ -77,7 +77,7 @@ Minor changes
 
 * Set BIP65 softfork heights in chainparams.cpp.
 * Update package links for OSX cross compilation.
-* Change IPC prefix from `bitcoin:` to `dogecoin:`.
+* Change IPC prefix from `bitcoin:` to `termubit:`.
 * Locale independent sorting.
 * Corrections to Italian translation.
 * Refresh main and test network checkpoints and seeds.
