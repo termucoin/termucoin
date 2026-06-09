@@ -202,7 +202,6 @@ private:
 public:
     CTestNetParams() {
         strNetworkID = "test";
-
         consensus.nHeightEffective = 0;
         consensus.nPowTargetTimespan = 2 * 24 * 60 * 60;
         consensus.fDigishieldDifficultyCalculation = false;
@@ -290,7 +289,7 @@ public:
         digishieldConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
         minDifficultyConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
         auxpowConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
-        assert(consensus.hashGenesisBlock == uint256S("0x00000ccb8c7b7da40e6acb5372f01395da0724a443fd36db899b1d85c3ffae61"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000937cdbf9936fb1338bdb7ae61798c6d761d1d436606adef9a8bce33b6b4"));
         assert(genesis.hashMerkleRoot == uint256S("0x873be58f7caf71c8b1f08dcac7746e9d79c484703e0bc3a3fc1712400a3d5771"));
 
         vSeeds.clear();
