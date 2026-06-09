@@ -155,7 +155,7 @@ public:
         digishieldConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
         auxpowConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
         assert(consensus.hashGenesisBlock == uint256S("0x00000937cdbf9936fb1338bdb7ae61798c6d761d1d436606adef9a8bce33b6b4"));
-        assert(genesis.hashMerkleRoot == uint256S("0x873be58f7caf71c8b1f08dcac7746e9d79c484703e0bc3a3fc1712400a3d5771"));
+        assert(genesis.hashMerkleRoot == uint256S("0xd3b94512c4788accd135f45bba9a6045322c4ec33897076c29f0e787bb35a977"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         // vSeeds.push_back(CDNSSeedData("", "", true));
