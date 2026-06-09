@@ -242,7 +242,7 @@ public:
         consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000540f2f62ff9a26"); // 5,900,000
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x00000ccb8c7b7da40e6acb5372f01395da0724a443fd36db899b1d85c3ffae61");
+        consensus.defaultAssumeValid = uint256S("0x00000e004e7ccdb7cf76724afa08a97820036ded34839c692f8cc0c906845f37");
 
         // AuxPoW parameters
         consensus.nAuxpowChainId = 0x0024; // 36
@@ -284,12 +284,12 @@ public:
         nDefaultPort = 12253;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1773223200, 4079324, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1773223200, 7201307, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         digishieldConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
         minDifficultyConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
         auxpowConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
-        assert(consensus.hashGenesisBlock == uint256S("0x00000f187b39518af016c86faf779827552d3b92c2719679fcc3c762fc0f09ed"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000e004e7ccdb7cf76724afa08a97820036ded34839c692f8cc0c906845f37"));
         assert(genesis.hashMerkleRoot == uint256S("0xd3b94512c4788accd135f45bba9a6045322c4ec33897076c29f0e787bb35a977"));
 
         vSeeds.clear();
