@@ -3,7 +3,7 @@ name: termubit-core
 version: '1.14.6'
 summary: Reference client of Termubit, a peer-to-peer digital currency like Bitcoin.
 description: |
-  Termubit is a community-driven cryptocurrency that was inspired by a Shiba Inu meme. The Termubit Core software allows anyone to operate a node in the Termubit blockchain networks and uses the Scrypt hashing method for Proof of Work. It is adapted from Bitcoin Core and other cryptocurrencies.
+  Termubit is a community-driven cryptocurrency that was Technology. The Termubit Core software allows anyone to operate a node in the Termubit blockchain networks and uses the Scrypt hashing method for Proof of Work. It is adapted from Bitcoin Core and other cryptocurrencies.
 
 grade: stable
 confinement: strict
