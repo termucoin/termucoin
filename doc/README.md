@@ -18,7 +18,7 @@ The Termubit repo's [root README](/README.md) contains relevant information on t
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/) forums, in the [Termubit thread](https://bitcointalk.org/index.php?topic=361813.0).
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/) forums, in the [Termubit thread](https://bitcointalk.org/index.php?topic=5585615).
 * Discuss on [#termubit-dev](http://webchat.freenode.net/?channels=termubit-dev) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=termubit-dev).
 
 ### Miscellaneous
