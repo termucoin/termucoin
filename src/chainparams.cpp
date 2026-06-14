@@ -125,7 +125,7 @@ public:
         digishieldConsensus.nHeightEffective = 270000;
         digishieldConsensus.fSimplifiedRewards = true;
         digishieldConsensus.fDigishieldDifficultyCalculation = true;
-        digishieldConsensus.nPowTargetTimespan = 3 * 60; // post-digishield: 5 minute
+        digishieldConsensus.nPowTargetTimespan = 3 * 60; // post-digishield: 3 minute
         digishieldConsensus.nCoinbaseMaturity = 100;
 
         // Blocks 323900+ are AuxPoW
