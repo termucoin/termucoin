@@ -130,7 +130,7 @@ CAmount GetTermubitBlockSubsidy(int nHeight, const Consensus::Params& consensusP
     // Reward: 50 TERM per block
     CAmount nSubsidy = 50 * COIN;
 
-    // halving every 2.100.000 per block
+    // halving every 1.280.000 per block
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
 
     // Maximum halving until the prize runs out (0)
