@@ -96,7 +96,7 @@
     </message>
     <message>
         <source>These are your Termubit addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Berikut merupakan alamat - alamat Termubitmu yang berguna untuk mengirimkan pembayaran. Selalu periksa jumlah dan alamat penerima sebelum mengirimkan koin.</translation>
+        <translation>Berikut merupakan alamat - alamat Termubit mu yang berguna untuk mengirimkan pembayaran. Selalu periksa jumlah dan alamat penerima sebelum mengirimkan koin!</translation>
     </message>
     <message>
         <source>These are your Termubit addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
