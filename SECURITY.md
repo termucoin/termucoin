@@ -13,7 +13,7 @@ developers:
 | Name           | E-mail                  | PGP key fingerprint
 | :------------- | :---------------------- | :-------------------
 | AresCyu    | areshin@proton.me      | F7B7 558F 0AB4 27E2 29FC 3FA6 5591 0330 E5CA 9ACF
-| Kaito Sawano | kaitosawano@proton.me | E324 9D4E E7F3 7C7F 8B30 676F 603E F476 B796 1EA7
+| Kaito Sawano | kaitosawano@proton.me | 4CF2 2F69 ECE3 CF8B 2B1F 9A29 9CB5 9DE9 95B7 8573
 
 Keys can be imported by running the following command:
 
