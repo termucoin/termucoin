@@ -127,17 +127,13 @@ bool CheckAuxPowProofOfWork(const CBlockHeader& block, const Consensus::Params& 
 
 CAmount GetTermubitBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, uint256 prevHash)
 {
-    // Reward: 50 TERM per block
-    CAmount nSubsidy = 50 * COIN;
-
-    // // Subsidy is cut in half every 1,280,000 blocks which will occur approximately every 7 years.
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
-
-    // Maximum halving until the prize runs out (0)
+    // Force block reward to zero when right shift is undefined.
     if (halvings >= 64)
         return 0;
 
+    CAmount nSubsidy = 50 * COIN;
+    // Subsidy is cut in half every 1,280,000 blocks which will occur approximately every 7+ years.
     nSubsidy >>= halvings;
-
     return nSubsidy;
 }
