@@ -1,4 +1,4 @@
-// Copyright (c) 2026 The Termubit developers
+// Copyright (c) 2026 The Termubit Core developers
 // Copyright (c) 2026-2027 Aldianokto
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -133,7 +133,7 @@ CAmount GetTermubitBlockSubsidy(int nHeight, const Consensus::Params& consensusP
         return 0;
 
     CAmount nSubsidy = 50 * COIN;
-    // Subsidy is cut in half every 1,280,000 blocks which will occur approximately every 7+ years.
+    // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
     nSubsidy >>= halvings;
     return nSubsidy;
 }
