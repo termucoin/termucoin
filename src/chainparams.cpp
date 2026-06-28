@@ -125,7 +125,7 @@ public:
         digishieldConsensus.nHeightEffective = 270000;
         digishieldConsensus.fSimplifiedRewards = true;
         digishieldConsensus.fDigishieldDifficultyCalculation = true;
-        digishieldConsensus.nPowTargetTimespan = 3 * 60; // post-digishield: 3 minute
+        digishieldConsensus.nPowTargetTimespan = 5 * 60; // post-digishield: 5 minute
         digishieldConsensus.nCoinbaseMaturity = 100;
 
         // Blocks 323900+ are AuxPoW
@@ -253,7 +253,7 @@ public:
         // Blocks 270000 - 323900 are Digishield without minimum difficulty on all blocks
         digishieldConsensus = consensus;
         digishieldConsensus.nHeightEffective = 270000;
-        digishieldConsensus.nPowTargetTimespan = 3 * 60; // post-digishield: 3 minute
+        digishieldConsensus.nPowTargetTimespan = 5 * 60; // post-digishield: 5 minute
         digishieldConsensus.fDigishieldDifficultyCalculation = true;
         digishieldConsensus.fSimplifiedRewards = true;
         digishieldConsensus.fPowAllowMinDifficultyBlocks = false;
