@@ -1,0 +1,40 @@
+name: Build Termucoin
+
+on: [push, pull_request]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libboost-all-dev libdb-dev libdb++-dev
+      - name: Build
+        run: |
+          ./autogen.sh
+          ./configure --disable-tests --disable-bench
+          make -j$(nproc)
+      - name: Upload Binary
+        uses: actions/upload-artifact@v3
+        with:
+          name: termucoin-linux
+          path: src/termucoind
+
+  build-windows:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: sudo apt-get install -y mingw-w64
+      - name: Build
+        run: |
+          ./autogen.sh
+          ./configure --host=x86_64-w64-mingw32 --disable-tests
+          make -j$(nproc)
+      - name: Upload Binary
+        uses: actions/upload-artifact@v3
+        with:
+          name: termucoin-windows
+          path: src/termucoind.exe
