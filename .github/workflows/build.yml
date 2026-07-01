@@ -23,7 +23,7 @@ jobs:
           name: termucoin-linux
           path: src/termucoind
 
-  build-windows:
+build-windows:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
@@ -33,13 +33,12 @@ jobs:
       - name: Build
         run: |
           sudo apt-get update && sudo apt-get install -y mingw-w64 build-essential libtool autotools-dev automake pkg-config bsdmainutils python3
-          # Build library windows di folder depends
           cd depends
-          make HOST=x86_64-w64-mingw32 -j$(nproc)
+          # Paksa build tanpa zmq
+          make HOST=x86_64-w64-mingw32 -j$(nproc) NO_ZMQ=1
           cd ..
-          # Setup environment
           ./autogen.sh
-          # Konfigurasi dengan flag C++14 dan disable fitur berat
+          # Tambahkan --disable-zmq agar tidak dicari saat configure
           ./configure --prefix=`pwd`/depends/x86_64-w64-mingw32 --disable-tests --disable-wallet --without-gui --disable-bench --disable-zmq CXXFLAGS="-std=c++14"
           make -j$(nproc)
       - name: Upload Binary
