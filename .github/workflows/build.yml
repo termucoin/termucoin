@@ -8,8 +8,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-        submodules: recursive
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libboost-all-dev libdb-dev libdb++-dev
       - name: Build
@@ -28,6 +26,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+        submodules: recursive
       - name: Build
         run: |
           sudo apt-get update && sudo apt-get install -y mingw-w64 build-essential libtool autotools-dev automake pkg-config bsdmainutils python3
