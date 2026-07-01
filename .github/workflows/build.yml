@@ -16,7 +16,7 @@ jobs:
           ./configure --disable-tests --disable-bench
           make -j$(nproc)
       - name: Upload Binary
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: termucoin-linux
           path: src/termucoind
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Install dependencies
         run: sudo apt-get install -y mingw-w64
       - name: Build
@@ -34,7 +34,7 @@ jobs:
           ./configure --host=x86_64-w64-mingw32 --disable-tests
           make -j$(nproc)
       - name: Upload Binary
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: termucoin-windows
           path: src/termucoind.exe
