@@ -33,7 +33,7 @@ jobs:
           make HOST=x86_64-w64-mingw32 -j$(nproc)
           cd ..
           ./autogen.sh
-          ./configure --prefix=`pwd`/depends/x86_64-w64-mingw32 --disable-tests --disable-wallet --without-gui --disable-bench CXXFLAGS="-std=c++11"
+          ./configure --prefix=`pwd`/depends/x86_64-w64-mingw32 --disable-tests --disable-wallet --without-gui --disable-bench CXXFLAGS="-std=c++14"
           make -j$(nproc)
       - name: Upload Binary
         uses: actions/upload-artifact@v4
