@@ -192,7 +192,5 @@ jobs:
           
       - name: Build depends
         run: |
-          ./autogen.sh
-          ./configure ${{ matrix.target.flags }} --disable-tests --disable-bench CXXFLAGS="-std=c++14"
-          make -j$(nproc)
+          make $MAKEJOBS -C depends HOST=${{ matrix.host }} ${{ matrix.dep-opts }}
           
