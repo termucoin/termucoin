@@ -34,12 +34,8 @@ jobs:
           - aarch64-linux-experimental
           - armhf-linux
           - i686-linux
-          - i686-win
           - x86_64-linux-dbg
           - x86_64-linux-nowallet
-          - x86_64-macos
-          - x86_64-win
-          - x86_64-win-experimental
           - x86_64-linux-experimental
         include:
           - name: i686-linux
