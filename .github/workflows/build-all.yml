@@ -1,42 +1,30 @@
-name: Full Build Matrix
+name: Build Native
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
-    strategy:
-      fail-fast: false
-      matrix:
-        target:
-          - { name: "aarch64-linux", host: "aarch64-linux-gnu", flags: "" }
-          - { name: "x86_64-linux-nowallet", host: "x86_64-pc-linux-gnu", flags: "--disable-wallet" }
-          - { name: "i686-win", host: "i686-w64-mingw32", flags: "--enable-experimental" }
-
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Install System Dependencies
+      - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential libtool autotools-dev automake pkg-config \
-          g++-aarch64-linux-gnu g++-mingw-w64-i686 gcc-mingw-w64-i686
+          libssl-dev libevent-dev libboost-system-dev libboost-filesystem-dev \
+          libboost-chrono-dev libboost-program-options-dev libboost-test-dev \
+          libboost-thread-dev libdb++-dev libsqlite3-dev
 
-      - name: Build Dependencies (Local)
-        run: |
-          cd depends
-          make HOST=${{ matrix.target.host }} -j$(nproc)
-
-      - name: Configure and Build
+      - name: Build
         run: |
           ./autogen.sh
-          ./configure --prefix=$(pwd)/depends/${{ matrix.target.host }} \
-          --with-incompatible-bdb ${{ matrix.target.flags }} \
-          CXXFLAGS="-std=c++14"
+          # Tambahkan flag --disable-wallet dan --disable-zmq agar tidak mencari libdb/zmq
+          ./configure --disable-wallet --disable-zmq --disable-tests --disable-bench CXXFLAGS="-std=c++14"
           make -j$(nproc)
 
-      - name: Upload Artifacts
+      - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: termucoin-${{ matrix.target.name }}
-          path: src/termucoind*
+          name: termucoin-native
+          path: src/termucoind
