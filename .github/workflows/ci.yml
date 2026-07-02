@@ -182,3 +182,11 @@ jobs:
           echo "${{ matrix.sdk-shasum }}  depends/sdk-sources/${{ env.sdk-filename }}" | sha256sum -c
           tar -C depends/SDKs -xf depends/sdk-sources/${{ env.sdk-filename }}
           
+      - name: Dependency cache
+        uses: actions/cache@v5
+        env:
+          cache-name: depends
+        with:
+          path: ./depends/built
+          key: ${{ matrix.name }}-${{ env.cache-name }}-${{ hashFiles('depends/packages/*', '.github/workflows/ci.yml') }}
+          
