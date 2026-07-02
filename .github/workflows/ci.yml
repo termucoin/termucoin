@@ -8,8 +8,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Kita gunakan build native (x86_64) untuk semuanya, 
-        # karena ini yang paling stabil dan sudah terbukti berhasil di screenshot 1.
         target:
           - { name: "x86_64-linux", flags: "" }
           - { name: "aarch64-linux", flags: "" }
@@ -34,7 +32,6 @@ jobs:
       - name: Build
         run: |
           ./autogen.sh
-          # Menambahkan --disable-tests dan --disable-bench untuk menghilangkan error 210
           ./configure ${{ matrix.target.flags }} --with-gui=qt5 --disable-tests --disable-bench CXXFLAGS="-std=c++14"
           make -j$(nproc)
 
