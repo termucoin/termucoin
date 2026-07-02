@@ -21,13 +21,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Dependencies
+- name: Install Dependencies
         run: |
           sudo apt-get update
+          # Tambahkan paket untuk cross-compile libdb
           sudo apt-get install -y build-essential autotools-dev automake pkg-config \
           g++-aarch64-linux-gnu g++-arm-linux-gnueabihf g++-mingw-w64-i686 \
-          libboost-all-dev libdb-dev libssl-dev libevent-dev
-
+          libboost-all-dev libssl-dev libevent-dev \
+          libdb5.3-dev:arm64 libdb5.3-dev:armhf
+          
       - name: Build
         run: |
           ./autogen.sh
