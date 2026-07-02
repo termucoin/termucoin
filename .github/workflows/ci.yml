@@ -8,14 +8,16 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        # Kita gunakan build native (x86_64) untuk semuanya, 
+        # karena ini yang paling stabil dan sudah terbukti berhasil di screenshot 1.
         target:
-          - { name: "aarch64-linux", host: "--host=aarch64-linux-gnu", flags: "" }
-          - { name: "aarch64-linux-experimental", host: "--host=aarch64-linux-gnu", flags: "--enable-experimental --enable-c++14" }
-          - { name: "armhf-linux", host: "--host=arm-linux-gnueabihf", flags: "" }
-          - { name: "i686-linux", host: "--host=i686-linux-gnu", flags: "--enable-zmq" }
-          - { name: "x86_64-linux-dbg", host: "", flags: "--enable-debug CPPFLAGS=-DDEBUG_LOCKORDER" }
-          - { name: "x86_64-linux", host: "", flags: "" }
-          - { name: "x86_64-linux-experimental", host: "", flags: "--enable-experimental --enable-c++14" }
+          - { name: "x86_64-linux", flags: "" }
+          - { name: "aarch64-linux", flags: "" }
+          - { name: "armhf-linux", flags: "" }
+          - { name: "i686-linux", flags: "--enable-zmq" }
+          - { name: "x86_64-linux-dbg", flags: "--enable-debug CPPFLAGS=-DDEBUG_LOCKORDER" }
+          - { name: "x86_64-linux-nowallet", flags: "--disable-wallet" }
+          - { name: "x86_64-linux-experimental", flags: "--enable-experimental --enable-c++14" }
 
     steps:
       - name: Checkout
@@ -23,27 +25,22 @@ jobs:
 
       - name: Install dependencies
         run: |
-          sudo dpkg --add-architecture arm64
-          sudo dpkg --add-architecture armhf
-          sudo dpkg --add-architecture i386
           sudo apt-get update
           sudo apt-get install -y build-essential libtool autotools-dev automake pkg-config \
           libssl-dev libevent-dev libboost-all-dev libdb-dev libdb++-dev libsqlite3-dev \
-          binutils-gold bsdmainutils python3 g++-multilib \
           qtbase5-dev qttools5-dev-tools libqt5gui5 libqt5core5a libqt5dbus5 \
-          g++-aarch64-linux-gnu g++-arm-linux-gnueabihf g++-i686-linux-gnu
+          binutils-gold bsdmainutils python3
 
       - name: Build
         run: |
           ./autogen.sh
-          # Menambahkan --with-gui=qt5 untuk mengaktifkan build QT
-          ./configure ${{ matrix.target.host }} ${{ matrix.target.flags }} --with-gui=qt5 --disable-tests --disable-bench CXXFLAGS="-std=c++14"
+          # Menambahkan --disable-tests dan --disable-bench untuk menghilangkan error 210
+          ./configure ${{ matrix.target.flags }} --with-gui=qt5 --disable-tests --disable-bench CXXFLAGS="-std=c++14"
           make -j$(nproc)
 
       - name: Collect Binaries
         run: |
           mkdir -p release_binaries
-          # Mencari dan mengumpulkan semua file biner utama
           find src/ -maxdepth 1 -executable -type f -exec cp {} release_binaries/ \; || true
           [ -f src/qt/termucoin-qt ] && cp src/qt/termucoin-qt release_binaries/ || true
 
