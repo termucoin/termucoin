@@ -23,6 +23,9 @@ jobs:
 
       - name: Install dependencies
         run: |
+          sudo dpkg --add-architecture arm64
+          sudo dpkg --add-architecture armhf
+          sudo dpkg --add-architecture i386
           sudo apt-get update
           sudo apt-get install -y build-essential libtool autotools-dev automake pkg-config \
           libssl-dev libevent-dev libboost-all-dev libdb-dev libdb++-dev libsqlite3-dev \
@@ -33,12 +36,14 @@ jobs:
       - name: Build
         run: |
           ./autogen.sh
+          # Menambahkan --with-gui=qt5 untuk mengaktifkan build QT
           ./configure ${{ matrix.target.host }} ${{ matrix.target.flags }} --with-gui=qt5 --disable-tests --disable-bench CXXFLAGS="-std=c++14"
           make -j$(nproc)
 
       - name: Collect Binaries
         run: |
           mkdir -p release_binaries
+          # Mencari dan mengumpulkan semua file biner utama
           find src/ -maxdepth 1 -executable -type f -exec cp {} release_binaries/ \; || true
           [ -f src/qt/termucoin-qt ] && cp src/qt/termucoin-qt release_binaries/ || true
 
