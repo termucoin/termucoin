@@ -24,7 +24,7 @@ termucoin-cli
 ------------
 
 Where previously commands were sent to termucoind by running
-"termucoind <command>", 1.0.0 adopts the model from Bitcoin Core 0.9 where there is
+"termucoind <command>", 1.0.0 adopts the model from Bitcoin Core where there is
 a separate "termucoin-cli" executable which is used instead. This avoids the risk
 of accidentally trying to start two daemons at the same time, for example.
 
