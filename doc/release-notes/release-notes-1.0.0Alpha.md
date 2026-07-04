@@ -1,13 +1,10 @@
 # Termucoin Core 1.0.0 Alpha
 =========================
 
-Termucoin Core 1.0.0 is a complete re-architecture of Termucoin, changing from
-using the Litecoin client as its base, to Bitcoin 0.9. It's still Termucoin,
+Termucoin Core 1.0.0 Alpha is a complete re-architecture of Termucoin, changing from
+using the Litecoin client as its base, to Bitcoin It's still Termucoin,
 with the same Scrypt PoW algorithm, same reward schedule, but there are a 
 lot of changes under the hood.
-
-
-For the full Bitcoin 0.9 changelog, please see https://bitcointalk.org/index.php?topic=522014
 
 Please note that this is a very early release, and a full audit of the code
 is still in progress. The client has been hard-coded to only work with testnet
