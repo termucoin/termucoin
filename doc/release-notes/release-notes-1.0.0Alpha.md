@@ -1,7 +1,7 @@
-# Termucoin Core 1.7 Alpha
+# Termucoin Core 1.0.0 Alpha
 =========================
 
-Termucoin Core 1.7 is a complete re-architecture of Termucoin, changing from
+Termucoin Core 1.0.0 is a complete re-architecture of Termucoin, changing from
 using the Litecoin client as its base, to Bitcoin 0.9. It's still Termucoin,
 with the same Scrypt PoW algorithm, same reward schedule, but there are a 
 lot of changes under the hood.
@@ -12,14 +12,6 @@ For the full Bitcoin 0.9 changelog, please see https://bitcointalk.org/index.php
 Please note that this is a very early release, and a full audit of the code
 is still in progress. The client has been hard-coded to only work with testnet
 for now, to avoid the risk of damaging real wallets.
-
-
-Downgrading
------------
-
-First and foremost, please note that downgrading from 1.7 to 1.6 is not trivial.
-1.7 now uses Berkeley DB 5.1 as its default database (in place of 4.8), and as
-such may create database files which are incompatible with previous versions.
 
 Rebranding to Termucoin Core
 ---------------------------
@@ -32,7 +24,7 @@ termucoin-cli
 ------------
 
 Where previously commands were sent to termucoind by running
-"termucoind <command>", 1.7 adopts the model from Bitcoin Core 0.9 where there is
+"termucoind <command>", 1.0.0 adopts the model from Bitcoin Core 0.9 where there is
 a separate "termucoin-cli" executable which is used instead. This avoids the risk
 of accidentally trying to start two daemons at the same time, for example.
 
