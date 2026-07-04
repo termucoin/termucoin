@@ -2,7 +2,7 @@
 =========================
 
 Termucoin Core 1.0.0 Alpha is a complete re-architecture of Termucoin, changing from
-using the Litecoin client as its base, to Bitcoin It's still Termucoin,
+using the Litecoin/Dogecoin client as its base, to Bitcoin It's still Termucoin,
 with the same Scrypt PoW algorithm, same reward schedule, but there are a 
 lot of changes under the hood.
 
