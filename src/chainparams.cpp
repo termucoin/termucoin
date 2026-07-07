@@ -235,10 +235,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1462060800; // May 1st 2016
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 0; // Disabled
 
-        // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000540f2f62ff9a26"); // 5,900,000
-
-        // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00000e004e7ccdb7cf76724afa08a97820036ded34839c692f8cc0c906845f37");
 
         // AuxPoW parameters
