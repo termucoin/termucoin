@@ -64,10 +64,7 @@ Main development resources:
   follow planned and in-progress work for upcoming releases.
 * [GitHub Discussions](https://github.com/termucoin/termucoin/discussions) is used
   to discuss features, planned and unplanned, related to both the development of
-  the Termucoin Core software, the underlying protocols and the TRB asset.
-  
-### Version strategy
-Version numbers are following ```major.minor.patch``` semantics.
+  the Termucoin Core software, the underlying protocols and the TERM asset.
 
 ### Branches
 There are 4 types of branches in this repository:
@@ -84,23 +81,6 @@ There are 4 types of branches in this repository:
 *Maintenance branches are exclusively mutable by release. When a release is*
 *planned, a development branch will be created and commits from master will*
 *be cherry-picked into these by maintainers.*
-
-## Contributing 🤝
-
-If you find a bug or experience issues with this software, please report it
-using the [issue system](https://github.com/termucoin/termucoin/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5Bbug%5D+).
-
-Please see [the contribution guide](CONTRIBUTING.md) to see how you can
-participate in the development of Termucoin Core. There are often
-[topics seeking help](https://github.com/termucoin/termucoin/labels/help%20wanted)
-where your contributions will have high impact and get very appreciation. wow.
-
-## Very Much Frequently Asked Questions ❓
-
-Do you have a question regarding Termucoin? An answer is perhaps already in the
-[FAQ](doc/FAQ.md) or the
-[Q&A section](https://github.com/termucoin/termucoin/discussions/categories/q-a)
-of the discussion board!
 
 ## License ⚖️
 Termucoin Core is released under the terms of the MIT license. See
