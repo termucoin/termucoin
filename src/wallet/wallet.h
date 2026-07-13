@@ -76,7 +76,7 @@ static const CAmount DEFAULT_DISCARD_THRESHOLD = COIN / 100000;
  * the amount of data that needs to be synchronized when validating the chain.
  * This way, replacements for fee bumps are transient rather than persisted.
  */
-static const CAmount WALLET_INCREMENTAL_RELAY_FEE = RECOMMENDED_MIN_TX_FEE / 10;
+static const CAmount WALLET_INCREMENTAL_RELAY_FEE = RECOMMENDED_MIN_TX_FEE / 5000;
 /*
  * Termucoin: Creating change outputs at exactly the dustlimit is counter-
  * productive because it leaves no space to bump the fee up, so we make the
