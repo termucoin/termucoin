@@ -54,18 +54,18 @@ struct LockPoints;
 /** Default for DEFAULT_WHITELISTRELAY. */
 static const bool DEFAULT_WHITELISTRELAY = true;
 /** Default for DEFAULT_WHITELISTFORCERELAY. */
-static const bool DEFAULT_WHITELISTFORCERELAY = true;
+static const bool DEFAULT_WHITELISTFORCERELAY = false;
 /** Default for -minrelaytxfee, minimum relay fee for transactions */
-static const CAmount DEFAULT_MIN_RELAY_TX_FEE = RECOMMENDED_MIN_TX_FEE / 10;
+static const CAmount DEFAULT_MIN_RELAY_TX_FEE = RECOMMENDED_MIN_TX_FEE / 1000;
 //! -maxtxfee default
 //rnicoll: 8/2021 scaled down as recommended fee is lowered
-static const CAmount DEFAULT_TRANSACTION_MAXFEE = RECOMMENDED_MIN_TX_FEE * 10000;
+static const CAmount DEFAULT_TRANSACTION_MAXFEE = RECOMMENDED_MIN_TX_FEE * 10;
 
 //! Discourage users to set fees higher than this amount (in satoshis) per kB
 /* Termucoin: Set the high tx fee to be higher than the default values
  *           implemented by the wallet.
  */
-static const CAmount HIGH_TX_FEE_PER_KB = RECOMMENDED_MIN_TX_FEE * 1000;
+static const CAmount HIGH_TX_FEE_PER_KB = RECOMMENDED_MIN_TX_FEE * 100;
 
 //! -maxtxfee will warn if called with a higher fee than this amount (in satoshis)
 //mlumin: 5/2021 adjusted max upward in terms of coin
@@ -79,7 +79,7 @@ static const unsigned int DEFAULT_DESCENDANT_LIMIT = 25;
 /** Default for -limitdescendantsize, maximum kilobytes of in-mempool descendants */
 static const unsigned int DEFAULT_DESCENDANT_SIZE_LIMIT = 101;
 /** Default for -mempoolexpiry, expiration time for mempool transactions in hours */
-static const unsigned int DEFAULT_MEMPOOL_EXPIRY = 24;
+static const unsigned int DEFAULT_MEMPOOL_EXPIRY = 336;
 /** The maximum size of a blk?????.dat file (since 0.8) */
 static const unsigned int MAX_BLOCKFILE_SIZE = 0x8000000; // 128 MiB
 /** The pre-allocation chunk size for blk?????.dat files (since 0.8) */
