@@ -52,7 +52,7 @@ static const unsigned int DEFAULT_KEYPOOL_SIZE = 100;
 static const CAmount DEFAULT_TRANSACTION_FEE = RECOMMENDED_MIN_TX_FEE;
 //! -fallbackfee default
 //mlumin: 5/2021 scaled minimum, this likely will have to change for fee reduction
-//rnicoll: 8/2021 reduce to 1,000,000 Koinu
+//rnicoll: 8/2021 reduce to 1,000,000 Coin
 static const CAmount DEFAULT_FALLBACK_FEE = RECOMMENDED_MIN_TX_FEE;
 //! -mintxfee default
 static const CAmount DEFAULT_TRANSACTION_MINFEE = RECOMMENDED_MIN_TX_FEE;
@@ -62,10 +62,10 @@ static const CAmount DEFAULT_TRANSACTION_MINFEE = RECOMMENDED_MIN_TX_FEE;
  *         value can be changed when a significant portion of the relay network
  *         and miners have adopted a different hard dust limit.
  */
-/* 1.14.6: set the wallet's discard threshold to 0.01 TERM. Very network
+/* 1.14.6: set the wallet's discard threshold to 0.00001 TERM. Very network
  *         adoption of new hard dust limit
  */
-static const CAmount DEFAULT_DISCARD_THRESHOLD = COIN / 100;
+static const CAmount DEFAULT_DISCARD_THRESHOLD = COIN / 100000;
 
 //! minimum recommended increment for BIP 125 replacement txs
 /*
