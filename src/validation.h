@@ -56,10 +56,10 @@ static const bool DEFAULT_WHITELISTRELAY = true;
 /** Default for DEFAULT_WHITELISTFORCERELAY. */
 static const bool DEFAULT_WHITELISTFORCERELAY = false;
 /** Default for -minrelaytxfee, minimum relay fee for transactions */
-static const CAmount DEFAULT_MIN_RELAY_TX_FEE = RECOMMENDED_MIN_TX_FEE / 1000;
+static const CAmount DEFAULT_MIN_RELAY_TX_FEE = RECOMMENDED_MIN_TX_FEE / 10;
 //! -maxtxfee default
 //rnicoll: 8/2021 scaled down as recommended fee is lowered
-static const CAmount DEFAULT_TRANSACTION_MAXFEE = RECOMMENDED_MIN_TX_FEE * 10;
+static const CAmount DEFAULT_TRANSACTION_MAXFEE = RECOMMENDED_MIN_TX_FEE * 10000;
 
 //! Discourage users to set fees higher than this amount (in satoshis) per kB
 /* Termucoin: Set the high tx fee to be higher than the default values
