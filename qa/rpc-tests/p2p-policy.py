@@ -110,7 +110,7 @@ class P2PPolicyTests(BitcoinTestFramework):
         self.nodes[0].generate(101)
 
         ### test constants ###
-        koinu = Decimal("0.00000001")          # 1 Koinu expressed in TERM
+        aldian = Decimal("0.00000001")          # 1 Koinu expressed in TERM
         ten = Decimal("10.0")                  # uniform 10 TERM seed moneys
 
         ### parameters from fee policy ###
