@@ -1,4 +1,4 @@
-Termucoin Core 0.14.2
+Termucoin Core 0.1.2
 =====================
 
 Development
