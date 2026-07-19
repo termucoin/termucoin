@@ -72,14 +72,14 @@ You can list wallet addresses using `getaddressesbyaccount`:
 ```console
 aldianokto:~$ termucoin-cli getaddressesbyaccount ""
 [
-  "DA2fBazU8Y4epNJ2fQRZCcWpxKZY9HrhLN"
+  "TCheDTR8xAFrNTTbxWZtdgDFk9bkAyLhaj"
 ]
 ```
 
 Using `getnewaddress` will generate a new wallet address:
 ```console
 aldianokto:~$ termucoin-cli getnewaddress
-DNnGtXk9khadE7EKCmQzxjnehenX92PKAv
+TRZQJSKz9hfBfxpq92a8wrHLdJp64sY7gr
 ```
 
 Private keys are stored in the `wallet.dat` file. You can use `backupwallet` to save a copy:
@@ -88,7 +88,7 @@ Private keys are stored in the `wallet.dat` file. You can use `backupwallet` to 
 aldianokto:~$ termucoin-cli backupwallet /path/of/wallet/backup
 ```
 
-**Tip:** Termucoin addresses start with the letter `D`.
+**Tip:** Termucoin addresses start with the letter `T`.
 
 You now have two wallet addresses to share with other people to receive TERM! Consider avoiding [address reuse](https://en.bitcoin.it/wiki/Address_reuse) for anonymity and security reasons.
 
@@ -106,7 +106,7 @@ For example, to see current balance with transaction having at least 5 confirmat
 
 ```console
 aldianokto:~$ termucoin-cli getbalance "*" 5
-421.552000
+51841.03168688
 ```
 
 ### Sending transactions
@@ -121,7 +121,7 @@ It's possible to use a single command to create, sign and send a transaction :
 aldianokto:~$ termucoin-cli sendtoaddress address amount
 
 #Example
-aldianokto:~$ termucoin-cli sendtoaddress nWSYUqtimF7B6qW4GBdczaG6jvqKutS1Nh 420
+aldianokto:~$ termucoin-cli sendtoaddress TFDmKY8hCUqUYkgTkALWnu7ryLde1hefRM 5
 ```
 
 So much spending power !
@@ -137,16 +137,16 @@ This displays a list of UTXOs associated to addresses kept in the wallet.
 aldianokto:~$ termucoin-cli listunspent minconf maxconf '["address", ...]'
 
 #Example
-aldianokto:~$ termucoin-cli listunspent 1 9999999 '["nnJDY1xCRgWQc7vBXHUPMPsEynuZW23Y3P"]'
+aldianokto:~$ termucoin-cli listunspent 1 9999999 '["TFDmKY8hCUqUYkgTkALWnu7ryLde1hefRM"]'
 [
   {
-    "txid": "b869ed6606d52e6446dc12db02cf868ab693dd5b9f661116269536f0f8fa2433",
+    "txid": 296a44526fa7feeee5daa55829929decec4210435882db5b5dbda8d3feefa3fb",
     "vout": 0,
-    "address": "nnJDY1xCRgWQc7vBXHUPMPsEynuZW23Y3P",
+    "address": "TFDmKY8hCUqUYkgTkALWnu7ryLde1hefRM",
     "account": "",
-    "scriptPubKey": "76a914c6977da37560e1432c2e14e16952981a4c272cac88ac",
-    "amount": 100.00000000,
-    "confirmations": 1355,
+    "scriptPubKey": "22e914cdb14e11f5447f0fb077e4c5662063df118992df48es",
+    "amount": 50.00000000,
+    "confirmations": 590,
     "spendable": true,
     "solvable": true
   }
@@ -177,12 +177,12 @@ aldianokto:~$ termucoin-cli createrawtransaction "$utxos_to_use" '{"address":amo
 aldianokto:~$ utxos_to_use='
 [
   {
-    "txid": "b869ed6606d52e6446dc12db02cf868ab693dd5b9f661116269536f0f8fa2433",
+    "txid": "b869566603452e6446d0002db02cf998ab693dd5b22661556269536def8aa2444",
     "vout": 0
   }
 ]'
-aldianokto:~$ termucoin-cli createrawtransaction "$utxos_to_use" '{"nWSYUqtimF7B6qW4GBdczaG6jvqKutS1Nh":69, "nnJDY1xCRgWQc7vBXHUPMPsEynuZW23Y3P": 30.999}'
-01000000013324faf8f03695261611669f5bdd93b68a86cf02db12dc46642ed50666ed69b80000000000ffffffff0200a5459b010000001976a91418a89ee36293f15c4db4c01173babd579243161188ac60b8c4b8000000001976a914c6977da37560e1432c2e14e16952981a4c272cac88ac00000000
+aldianokto:~$ termucoin-cli createrawtransaction "$utxos_to_use" '{"TFDmKY8hCUqUYkgTkALWnu7ryLde1hefRM":69, "TRZQJSKz9hfBfxpq92a8wrHLdJp64sY7gr": 30.999}'
+0100001101332dda9bf03656261611249f588d93b68a86cde2db12dc46642ed506664d69878800000000ffffffff0200a5459b010007401976a91418a894e422de6564c464gb07573babd579243161188ac60b8c4b8055531301976a91488977da37560e353552e14e36992991a4c27266c88ac00000100
 ```
 
 You can combine multiple UTXO and send it to multiple recipients by extending the `utxos_to_use` and recipient JSON structures.
@@ -230,32 +230,20 @@ First, request the information about block 69:
 ```console
 #Find block hash from his height
 aldianokto:~$ termucoin-cli getblockhash 69
-3d2def20cd0d3aca148741ef469bda11647a3040d7669c82745d03c728706a8b
+4682873e6ce38ab24ab513fc70a365a5f94c6af35959da3827d9e37a39fbc087
 
 #Get block data
 aldianokto:~$ termucoin-cli getblock 3d2def20cd0d3aca148741ef469bda11647a3040d7669c82745d03c728706a8b
 {
-  "hash": "3d2def20cd0d3aca148741ef469bda11647a3040d7669c82745d03c728706a8b",
-  "confirmations": 7816,
-  "strippedsize": 190,
-  "size": 190,
-  "weight": 760,
-  "height": 69,
-  "version": 1,
-  "versionHex": "00000001",
-  "merkleroot": "695ce4208fa7a87ef9e99805b0910dc129058ecdceb5cef7e25f71dcdc7936db",
+  "hash": "4682873e6ce38ab24ab513fc70a365a5f94c6af35959da3827d9e37a39fbc087",
+  "confirmations": 1087,
+  "strippedsize": 170,                                                                                 "size": 170,                                                                                         "weight": 680,                                                                                       "height": 69,                                                                                        "version": 2359300,                                                                                  "versionHex": "00240004",
+  "merkleroot": "0cac86f8c30fbaaa3ac60409eb2b16600bfe6525068b04637e9798eefe7ca3d0",
   "tx": [
-    "695ce4208fa7a87ef9e99805b0910dc129058ecdceb5cef7e25f71dcdc7936db"
-  ],
-  "time": 1386475225,
-  "mediantime": 1386475209,
-  "nonce": 3923708672,
-  "bits": "1e0ffff0",
-  "difficulty": 0.000244140625,
+    "0cac86f8c30fbaaa3ac60409eb2b16600bfe6525068b04637e9798eefe7ca3d0"                                 ],                                                                                                   "time": 17812xx779,                                                                                  "mediantime": 17812xx315,                                                                            "nonce": 42026,                                                                                      "bits": "1e0ffff0",
+  "difficulty": 0.000xxxxxx,
   "chainwork": "0000000000000000000000000000000000000000000000000000000004600460",
-  "previousblockhash": "ffa69e04f928b84f19d84da25fb544340e54dca6c03c33930da245719e61c5ea",
-  "nextblockhash": "44bf8abbbb96d4dcfb95df563e606c37987133ea3e013b23bbddde8d7f905fdd"
-}
+  "previousblockhash": "e5d55c1ab933ad621c2c25b1c429e409886777cf637cdbf6807f66b355f92c97",             "nextblockhash": "4d7deecb5f2d2149eaaefff9d0a12483b4c6702a2e6020bceb47d5b2e7b1ecc1"                }
 ```
 
 The `tx` field contains a list of all transactions included in this block. Only one transaction exist in block 69, the coinbase transaction.
@@ -267,40 +255,42 @@ We can see the entire transaction by querying for its identifier:
 aldianokto:~$ termucoin-cli getrawtransaction txid verbose
 
 #Example
-aldianokto:~$ termucoin-cli getrawtransaction 695ce4208fa7a87ef9e99805b0910dc129058ecdceb5cef7e25f71dcdc7936db 1
+this is just a composition or example
+
+aldianokto:~$ termucoin-cli getrawtransaction 4682873e6ce38ab24ab513fc70a365a5f94c6af35959da3827d9e37a39fbc087 1
 {
-  "hex": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0e04d9eea3520101062f503253482fffffffff0100ac6156be23000023210340a42a5ad6c4c0cd5ae539657032e0a359bd3e0f95771f34d71691b13460a624ac00000000",
-  "txid": "695ce4208fa7a87ef9e99805b0910dc129058ecdceb5cef7e25f71dcdc7936db",
-  "hash": "695ce4208fa7a87ef9e99805b0910dc129058ecdceb5cef7e25f71dcdc7936db",
-  "size": 109,
-  "vsize": 109,
+  "hex": "00000xxxxx",
+  "txid": "0cac86f8c30fbaaa3ac60409eb2b16600bfe6525068b04637e9798eefe7ca3d0",
+  "hash": "4682873e6ce38ab24ab513fc70a365a5f94c6af35959da3827d9e37a39fbc087",
+  "size": 89,
+  "vsize": 89,
   "version": 1,
   "locktime": 0,
   "vin": [
     {
-      "coinbase": "04d9eea3520101062f503253482f",
+      "coinbase": "01450105",
       "sequence": 4294967295
     }
   ],
   "vout": [
     {
-      "value": 393004.00000000,
+      "value": 50.00000000,
       "n": 0,
       "scriptPubKey": {
-        "asm": "0340a42a5ad6c4c0cd5ae539657032e0a359bd3e0f95771f34d71691b13460a624 OP_CHECKSIG",
-        "hex": "210340a42a5ad6c4c0cd5ae539657032e0a359bd3e0f95771f34d71691b13460a624ac",
+        "asm": "cdc14c81f5997f0cb088e4c5662063df198752cd OP_CHECKSIG",
+        "hex": "xxxxx",
         "reqSigs": 1,
         "type": "pubkey",
         "addresses": [
-          "D5TjotnkoXekNQBCn54CBWxjEzCJMMe7WS"
+          "TUj962N9p9aNssnUCW9cVVhy3YmPWpZx7H"
         ]
       }
     }
   ],
-  "blockhash": "3d2def20cd0d3aca148741ef469bda11647a3040d7669c82745d03c728706a8b",
-  "confirmations": 3964556,
-  "time": 1386475225,
-  "blocktime": 1386475225
+  "blockhash": "4682873e6ce38ab24ab513fc70a365a5f94c6af35959da3827d9e37a39fbc087",
+  "confirmations": 1087,
+  "time": 1781231779,
+  "blocktime": 1781227315
 }
 ```
 
