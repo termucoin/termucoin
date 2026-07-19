@@ -155,7 +155,7 @@ aldianokto:~$ termucoin-cli listunspent 1 9999999 '["TFDmKY8hCUqUYkgTkALWnu7ryLd
 
 The `minconf` and `maxconf` parameters filter the minimum and maximum number of [confirmations](https://www.pcmag.com/encyclopedia/term/bitcoin-confirmation) of the UTXO returned.
 
-> **Note:** The example address starts with `n` instead of `D`, because it uses [testnet](#mainnet-testnet-and-regtest).
+> **Note:** The example address starts with `n` instead of `T`, because it uses [testnet](#mainnet-testnet-and-regtest).
 
 ##### createrawtransaction
 
