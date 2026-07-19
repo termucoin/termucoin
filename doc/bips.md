@@ -2,7 +2,7 @@ BIP List
 ---------
 
 This document lists the protocol features that are implemented by Termucoin Core
-(up-to-date up to **v1.14.6**):
+(up-to-date up to **v1.1.3**):
 
 ### From Bitcoin
 
