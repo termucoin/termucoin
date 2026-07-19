@@ -304,7 +304,7 @@ Using `termucoind -help` will display all available configuration parameters tha
 
 **Command example :**
 ```console
-aldianokto:~$ termucoind -daemon -paytxfee=0.01 -sendfreetransactions=1 -maxconnections=150
+aldianokto:~$ termucoind -daemon -paytxfee=0.00001 - sendfreetransactions=1 -maxconnections=150
 ```
 
 Configuration can be persisted by creating a `termucoin.conf` file. Create it in the directory defined with the `datadir` setting, `$HOME/.termucoin` by default, or specify the file location with `-conf`.
@@ -314,7 +314,7 @@ Configuration can be persisted by creating a `termucoin.conf` file. Create it in
 daemon=1
 server=1
 listen=1
-paytxfee=0.01
+paytxfee=0.00001
 sendfreetransactions=1
 maxconnections=150
 ```
